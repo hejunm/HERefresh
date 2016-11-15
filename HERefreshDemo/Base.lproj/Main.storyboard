@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DC7-su-e1p">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="MUw-d4-X5N">
+            <objects>
+                <navigationController id="DC7-su-e1p" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="elD-58-JMl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NI3-HV-r7t" kind="relationship" relationship="rootViewController" id="rUU-hl-4ue"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e2a-Lt-kTP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2036" y="-616"/>
+        </scene>
+        <!--HERefresh-->
+        <scene sceneID="Q0a-OZ-Qu3">
+            <objects>
+                <viewController id="NI3-HV-r7t" customClass="ViewController" customModule="HERefreshDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5sL-4u-e9E"/>
+                        <viewControllerLayoutGuide type="bottom" id="b5a-e9-ELO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CUR-Gb-EFX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cpJ-8v-aZT">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FoodCell" rowHeight="130" id="6JW-7e-I45" customClass="FoodCell" customModule="HERefreshDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="130"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6JW-7e-I45" id="6op-at-262">
+                                            <frame key="frameInset" width="375" height="129"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s3p-7h-MVu">
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasty Burgers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMB-g8-Xei">
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gamburger" translatesAutoresizingMaskIntoConstraints="NO" id="h9Y-Zm-rJk"/>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.99215686270000003" green="0.51764705879999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="rMB-g8-Xei" firstAttribute="leading" secondItem="h9Y-Zm-rJk" secondAttribute="trailing" constant="30" id="4AP-bk-chw"/>
+                                                        <constraint firstAttribute="centerY" secondItem="rMB-g8-Xei" secondAttribute="centerY" id="AjN-lB-g4l"/>
+                                                        <constraint firstItem="h9Y-Zm-rJk" firstAttribute="leading" secondItem="s3p-7h-MVu" secondAttribute="leading" constant="15" id="KSr-Uv-6nC"/>
+                                                        <constraint firstAttribute="centerY" secondItem="h9Y-Zm-rJk" secondAttribute="centerY" constant="-0.5" id="cIv-Qg-dhU"/>
+                                                        <constraint firstItem="rMB-g8-Xei" firstAttribute="leading" secondItem="s3p-7h-MVu" secondAttribute="leading" constant="100" id="naL-ot-seA"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="naL-ot-seA"/>
+                                                        </mask>
+                                                    </variation>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="s3p-7h-MVu" secondAttribute="bottom" id="6He-QF-l4Z"/>
+                                                <constraint firstAttribute="trailing" secondItem="s3p-7h-MVu" secondAttribute="trailing" constant="6" id="Xm2-yr-Teo"/>
+                                                <constraint firstItem="s3p-7h-MVu" firstAttribute="leading" secondItem="6op-at-262" secondAttribute="leading" constant="6" id="jlQ-Dd-5cg"/>
+                                                <constraint firstItem="s3p-7h-MVu" firstAttribute="top" secondItem="6op-at-262" secondAttribute="top" constant="6" id="yhx-qk-tQU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="foodIcon" destination="h9Y-Zm-rJk" id="SN2-WY-3Gj"/>
+                                            <outlet property="foodName" destination="rMB-g8-Xei" id="FQZ-Dn-4mJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cpJ-8v-aZT" firstAttribute="leading" secondItem="CUR-Gb-EFX" secondAttribute="leading" id="Kkv-Ip-udH"/>
+                            <constraint firstAttribute="trailing" secondItem="cpJ-8v-aZT" secondAttribute="trailing" id="YK5-mF-8gb"/>
+                            <constraint firstAttribute="bottom" secondItem="cpJ-8v-aZT" secondAttribute="bottom" id="iLM-Mv-wHb"/>
+                            <constraint firstItem="cpJ-8v-aZT" firstAttribute="top" secondItem="CUR-Gb-EFX" secondAttribute="top" id="igm-yJ-Iwm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="HERefresh" id="lUx-yf-K1W"/>
+                    <connections>
+                        <outlet property="tableView" destination="cpJ-8v-aZT" id="eTA-tN-TJI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KYK-Jt-abg" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1406" y="-615"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gamburger" width="82" height="82"/>
+    </resources>
+</document>
