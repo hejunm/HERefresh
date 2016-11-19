@@ -64,8 +64,6 @@ self.tableView.addRefreshHeader(pullToMakeSoupHeader) {
 
 #### header-default
 
-咳咳，这个效果我是模仿的简书的。
-
 ![header-default](http://upload-images.jianshu.io/upload_images/1748276-8185213b22e0aa76?imageMogr2/auto-orient/strip)
 
 ```
